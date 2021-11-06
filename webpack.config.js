@@ -13,10 +13,10 @@ module.exports = {
     devServer: {
         index: true,
         mimeTypes: { 'text/html': ['phtml'] },
-        publicPath: __dirname + '/dist'
+        publicPath: 'http://localhost:3000/'
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title:'Development',
             template: './public/index.html'

@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-app.use(express.static(__dirname + '/dist'))
+// app.use(express.static(__dirname + '/dist'))
 
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
@@ -15,5 +15,7 @@ const middleware = webpackDevMiddleware(
 
 app.use(middleware)
 app.use(webpackHotMiddleware)
+app.use(middleware)
+
 
 app.listen(3000)
